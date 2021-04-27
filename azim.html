@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mr. Hacker</title>
+  
+  <style>
+  
+  *{
+  
+  margin: 0;
+  padding: 0;
+  font-family: bloody;
+  box-sizing: border-box;
+  user-select: none;
+  //color: #fff;
+  
+  }
+  
+  #main{
+  
+  height: 100vh;
+  width: 100vw;
+  background: url(8e1e853313ace4ffcf50b56f22f844d4.gif);
+  
+  /*url(200.gif),
+  url(giphy.gif)*/
+  
+  background-repeat:  no-repeat;
+  background-size: 100vw 100vh;
+  padding: 200px 100px;
+  
+  }
+  
+  #top{
+  
+  //background: red;
+  padding: 100px 0px;
+  text-align: center;
+  
+  }
+  
+  #top p{
+  
+  font-size: 25px;
+  color: red;
+  
+  }
+  
+  #top h1{
+  
+  font-size: 70px;
+  margin: 10px 0px;
+  color: #0f0;
+  animation: h1 2s alternate infinite;
+  
+  }
+  
+  @keyframes h1{
+  
+  from{
+  
+    transform: translate(-100px,-20px);
+    filter: blur(0);
+  
+  }
+  
+  40%{
+  
+    transform: translate(100px,-20px);
+  
+  }
+  
+  60%{
+  
+    transform: translate(-100px,20px);
+  
+  }
+  
+  to{
+  
+    transform: translate(100px,20px);
+    filter: blur(2px);
+  
+  }
+  
+  }
+  
+  #top h1 span{
+  
+  color: #f00;
+  
+  }
+  
+  #top #p{
+  
+  font-size: 40px;
+  letter-spacing: 12px;
+  color: red;
+  
+  }
+  
+  #target p{
+  
+  text-align: center;
+  padding: 100px 0px;
+  color: #0f0;
+  font-size: 30px;
+  
+  }
+  
+  #target p span{
+  
+  color: #f00;
+  font-weight: bold;
+  padding: 10px 0px;
+  
+  }
+  
+  #intro{
+  
+  text-align: center;
+  padding: 100px 0px;
+  
+  }
+  
+  #intro h3{
+  
+  font-size: 40px;
+  color: #f00;
+  margin-bottom: 20px;
+  animation: h3 0.1s alternate infinite;
+  
+  }
+  
+  @keyframes h3{
+  
+  from{opacity: 0}
+  
+  to{opacity: 1}
+  
+  }
+  
+  #intro p{
+  
+  color: #0f0;
+  font-size: 30px;
+  font-weight: bold;
+  
+  }
+  
+  #tune{
+  
+  padding-top: 80px;
+  text-align: center;
+  
+  }
+  
+  #tune button{
+  
+  font-size: 30px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background: #0f0;
+  border-radius: 5px;
+  color: #000;
+  transition: all 0.5s;
+  
+  }
+  
+  #tune button:hover{
+  
+  box-shadow: 0px 0px 20px #0f0;
+  background: #000;
+  color: #0f0;
+  
+  }
+  
+  @font-face{
+  
+  font-family: bloody;
+  src: url(BLOODY.TTF);
+  
+  }
+  
+  </style>
+  
+</head>
+<body>
+
+  <div id="main">
+  
+    <div id="top">
+    
+      <p>Nocturnal in the cyber world</p>
+      <h1>Mr. H<span>a</span>cker</h1>
+      <p id="p">Bangladesh</p>
+    
+    </div>
+    
+    <div id="target">
+    
+      <p>capturing your <span>footprints</span> in every moment!</p>
+    
+    </div>
+    
+    <div id="intro">
+    
+      <h3>Former Spy & CEO</h3>
+      <p>Mr. Hacker World <br/><br/> SpY bOx •★• Web Dark</p>
+    
+    </div>
+    
+    <div id="tune">
+    
+    
+      <audio src="Horror_Creature.mp3" id="audio" loop></audio>
+      <button onclick="document.querySelector('#audio').play()">Mr. Hacker</button>
+    
+    </div>
+         
+  </div>
+    
+</body>
+</html>
